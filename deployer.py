@@ -2,7 +2,9 @@
 
 #
 # Hyunwook Shin
-#
+# Code is from CMPE272 Final Project
+# The AMI ID has been updated to use
+# the premade AMI.
 
 import os
 import boto3
@@ -44,7 +46,7 @@ def main():
                            aws_secret_access_key=AWS_SECRET_KEY,
                            region_name='us-east-2' )
    if args.deploy:
-      instances = ec2.create_instances( ImageId='ami-c5062ba0',
+      instances = ec2.create_instances( ImageId='ami-2ef2cf4b',
                                         MinCount=1,
                                         MaxCount=instanceCount,
                                         KeyName=KEY_NAME,
